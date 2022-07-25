@@ -23,7 +23,7 @@ steps:
 
 
 - task: NuGetCommand@2
-  name:'NuGetRestore'
+  name: 'NuGetRestore'
   displayName:'NuGet restore packages'
   inputs:
         command: 'restore'
@@ -52,11 +52,11 @@ steps:
 
 
 - task: PublishBuildArtifacts@1
-  name:'PublishBuildArtifacts'
+  name: 'PublishBuildArtifacts'
   displayName:'Publish Build Artifacts'
   inputs:
-        PathtoPublish:'$(Build.ArtifactStagingDirectory)'
-        ArtifactName:'AzureTestProject'
-        publishLocation:'Container'
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'AzureTestProject'
+        publishLocation: 'Container'
 
 
