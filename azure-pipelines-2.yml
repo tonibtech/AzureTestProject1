@@ -36,7 +36,7 @@ steps:
   displayName:'Run Tests'
   inputs:
         command: 'test'
-        projects: '$(solution)'
+        projects:'$(solution)'
         arguments: '--configuration $(BuildConfiguration) '
 
 
@@ -46,17 +46,17 @@ steps:
   inputs:
         command: 'publish'
         publishWebProjects: false
-        projects: '$(solution)'
-        arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStangingDirectory)'
+        projects:'$(solution)'
+        arguments:'--configuration $(BuildConfiguration) --output $(Build.ArtifactStangingDirectory)'
         zipAfterPublish: false
 
 
 - task: PublishBuildArtifacts@1
-  name: 'PublishBuildArtifacts'
-  displayName: 'Publish Build Artifacts'
+  name:'PublishBuildArtifacts'
+  displayName:'Publish Build Artifacts'
   inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'AzureTestProject'
-        publishLocation: 'Container'
+        PathtoPublish:'$(Build.ArtifactStagingDirectory)'
+        ArtifactName:'AzureTestProject'
+        publishLocation:'Container'
 
 
