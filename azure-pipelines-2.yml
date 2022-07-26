@@ -46,7 +46,7 @@ steps:
   inputs:
         command: 'publish'
         publishWebProjects: false
-        projects: '$(solution)'
+        projects: '$(project)'
         arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStangingDirectory)'
         zipAfterPublish: false
 
