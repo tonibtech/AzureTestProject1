@@ -56,7 +56,7 @@ steps:
   displayName: 'Publish Build Artifacts'
   inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'AzureTestProject'
+        ArtifactName: 'AzureTestProject1'
         publishLocation: 'Container'
 
 
