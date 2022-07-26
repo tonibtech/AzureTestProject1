@@ -13,8 +13,8 @@ pool:
 variables:
   buildPlatform: 'Any CPU'
   buildConfiguratoin: 'Release'
-  solution: '**/tonibtech.AzureTestProject1.sln'
-  project: '**/tonibtech.AzureTestProject1.csproj'
+  solution: '**/RoundTheCode.AzureTestProject.sln'
+  project: '**/RoundTheCode.AzureTestProject.csproj'
 
 steps:
 - task: NuGetToolInstaller@1
