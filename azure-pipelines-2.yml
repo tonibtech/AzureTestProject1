@@ -11,8 +11,8 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  buildPlatform: 'Any CPU'
-  buildConfiguratoin: 'Release'
+  buildPlatform: 
+  buildConfiguratoin: 
   solution: '**/RoundTheCode.AzureTestProject.sln'
   project: '**/RoundTheCode.AzureTestProject.csproj'
 
