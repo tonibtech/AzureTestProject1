@@ -50,4 +50,3 @@ steps:
         projects: '$(project)'
         arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStangingDirectory)'
         zipAfterPublish: false
-
