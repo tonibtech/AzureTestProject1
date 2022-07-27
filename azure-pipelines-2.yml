@@ -38,7 +38,7 @@ steps:
   inputs:
         command: 'test'
         projects: '$(solution)'
-        arguments: '--configuration $(BuildConfiguration) '
+        arguments: '--configuration '
 
 
 - task: DotNetCoreCLI@2
@@ -48,7 +48,7 @@ steps:
         command: 'publish'
         publishWebProjects: false
         projects: '$(project)'
-        arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStangingDirectory)'
+        arguments: '--configuration --output $(Build.ArtifactStangingDirectory)'
         zipAfterPublish: false
 
 - task: PublishBuildArtifacts@1
