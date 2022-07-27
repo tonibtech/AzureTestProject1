@@ -17,6 +17,7 @@ variables:
   project: '**/RoundTheCode.AzureTestProject.csproj'
 
 steps:
+
 - task: NuGetToolInstaller@1
   name: 'NuGetToolInstaller'
   displayName: 'NuGet tool installer'
@@ -51,12 +52,24 @@ steps:
         zipAfterPublish: false
 
 
-- task: PublishBuildArtifacts@1
-  name: 'PublishBuildArtifacts'
-  displayName: 'Publish Build Artifacts'
-  inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'AzureTestProject1'
-        publishLocation: 'Container'
-
+stages:
+  - stage: DeployWebsite
+    displayName: 'Deploy website'        
+    pool:
+      vmImage: windows-latest
+    
+    jobs:    
+    - deployment: DeployWebsite
+      displayName: 'Deploy website'
+      environment: 'Production.DAVE'
+      strategy:
+       runOnce:
+         deploy:           
+          steps:
+          - checkout: none
+          
+          - download: 'buildPipeline'
+            name: 'DownloadBuildArtifacts'            
+            displayName: 'Download build artifacts'
+            artifact: 'AzureTestProject'
 
