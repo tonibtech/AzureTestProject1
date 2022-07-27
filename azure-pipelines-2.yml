@@ -13,8 +13,8 @@ pool:
 variables:
   buildPlatform: 'Any CPU'
   buildConfiguratoin: 'Release'
-  solution: '**/RoundTheCode.AzureTestProject.sln'
-  project: '**/RoundTheCode.AzureTestProject.csproj'
+  solution: '**/tonibtech.AzureTestProject.sln'
+  project: '**/tonibtech.AzureTestProject.csproj'
 
 steps:
 
